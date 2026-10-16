@@ -28,7 +28,7 @@ than reading an extra paragraph. That makes the two jobs:
 2. **Every quote has to be verifiable.** A paraphrase that sounds right is worse than "not found".
 
 The main finding: **off-the-shelf RAG retrieval misses about half of lawyer-labeled clauses.** BM25, dense
-embeddings and their hybrid all land between 50% and 54% recall@5. Legal clauses are worded in many ways
+embeddings (LSA and neural MiniLM) and their hybrids all land between 45% and 54% recall@5. Legal clauses are worded in many ways
 ("this Agreement shall be construed in accordance with..." never says "governing law"), so query-to-chunk
 similarity isn't enough. A scorer trained on lawyer labels from *other* contracts closes most of that gap.
 
@@ -71,6 +71,8 @@ category ──► learned clause scorer (per-category logistic regression over 
 |---|---|---|---|---|---|---|
 | BM25 | 23.8% | 41.0% | 50.7% | 64.1% | 66.3% | 0.529 |
 | Dense (LSA embeddings) | 28.2% | 45.0% | 54.3% | 66.1% | 69.7% | 0.582 |
+| Dense (MiniLM neural embeddings, `--embedder st`) | 19.0% | 36.7% | 45.1% | 59.7% | 57.9% | 0.461 |
+| Hybrid BM25 + MiniLM (RRF) | 25.1% | 42.4% | 52.9% | 67.3% | 67.7% | 0.546 |
 | Hybrid BM25 + dense (RRF) | 26.3% | 44.9% | 53.8% | 66.2% | 69.3% | 0.568 |
 | **ClauseTrace learned scorer** | **60.5%** | **82.1%** | **88.8%** | **94.9%** | **96.2%** | **0.900** |
 | Learned + BM25 + dense (RRF, dev-tuned) | 51.8% | 79.2% | 88.6% | 94.5% | 96.1% | 0.858 |
@@ -149,9 +151,13 @@ results/         every number in this README, as JSON
 
 ## Limitations
 
-- The dense baseline is LSA, not a neural embedder, because the environment the results were produced in
-  had no model downloads. `--embedder st` reruns it with MiniLM. A stronger embedder would narrow the gap
-  to the learned scorer; rerun with `--embedder st` to measure by how much.
+- The default dense baseline is LSA, trained on the training contracts. A general-purpose neural embedder
+  (all-MiniLM-L6-v2, `--embedder st`, results in `results/retrieval_test_st.json`) scored lower still:
+  45.1% recall@5, below BM25. Off-the-shelf embeddings don't capture how differently the same clause can
+  be worded. A legal-domain or larger embedder is untested.
+- Results shift slightly across library versions. With scikit-learn 1.9.1 / numpy 2.5.4 / scipy 1.18.1
+  the learned scorer gives 88.6% recall@5 (vs 88.8% above) and F1 0.852 (vs 0.855); AUROC is unchanged
+  at 0.961.
 - The learned scorer depends on CUAD's fixed 41-category taxonomy. A brand-new clause type falls back to
   BM25 until labeled examples exist.
 - CUAD covers commercial contracts filed with the SEC. Results may not transfer to litigation documents,
