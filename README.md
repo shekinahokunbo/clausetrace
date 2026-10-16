@@ -116,7 +116,7 @@ export ANTHROPIC_API_KEY=...  GEMINI_API_KEY=...
 python scripts/run_generation_eval.py --models anthropic:claude-haiku-5-5 anthropic:claude-sonnet-5-5 google:<gemini-model> --n 100
 ```
 
-Results are written to `results/generation_models_n100.json`. *(Results table to be added after the run.)*
+Results are written to `results/generation_models_n100.json`. Run it with your own keys to compare models.
 
 ## Run it
 

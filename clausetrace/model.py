@@ -9,7 +9,7 @@ import numpy as np
 from .chunking import Chunk, chunk_contract
 from .data import Contract
 from .pipeline import build_training_set, category_queries
-from .retrieval import BM25Retriever, LearnedRetriever, ranks_from_scores
+from .retrieval import BM25Retriever, LearnedRetriever
 
 
 class ClauseTrace:
