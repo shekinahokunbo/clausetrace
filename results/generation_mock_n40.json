@@ -1,0 +1,955 @@
+{
+  "n": 40,
+  "k": 5,
+  "k_retry": 10,
+  "seed": 7,
+  "retry_on_not_found": true,
+  "models": {
+    "mock/first-sentence": {
+      "summary": {
+        "n": 40,
+        "tp": 20,
+        "fp": 20,
+        "fn": 0,
+        "tn": 0,
+        "presence_precision": 0.5,
+        "presence_recall": 1.0,
+        "presence_f1": 0.6666666666666666,
+        "span_precision": 0.14135679818336644,
+        "span_recall": 0.07540313422666364,
+        "quotes_proposed": 40,
+        "rejected_quote_rate": 0.0,
+        "parse_failure_rate": 0.0,
+        "correction_rate": 0,
+        "latency_p50_s": 0.0004410743713378906,
+        "latency_p95_s": 0.00070953369140625,
+        "mean_input_tokens": 1392.975,
+        "mean_output_tokens": 43.7,
+        "mean_full_contract_tokens": 11026.45625,
+        "context_reduction": 0.8736697477033929
+      },
+      "rows": [
+        {
+          "qid": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding Agreement__Document Name",
+          "category": "Document Name",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 299,
+          "gold_chars": 21,
+          "overlap_chars": 21,
+          "quotes": [
+            "Exhibit 10.4\n\n                              CO-BRANDING AGREEMENT\n\nThis Co-Branding Agreement (this \"Agreement\") dated September 30, 1999 (the \"Effective Date\") is entered into between VerticalNet, Inc., a Pennsylvania corporation having a principal place of business at 700 Dresher Road, Suite 100, "
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1482,
+          "output_tokens": 75,
+          "latency_s": 0.0026102066040039062,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development Agreement__License Grant",
+          "category": "License Grant",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 18,
+          "gold_chars": 410,
+          "overlap_chars": 0,
+          "quotes": [
+            "law or regulation."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1455,
+          "output_tokens": 4,
+          "latency_s": 0.0005593299865722656,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "MusclepharmCorp_20170208_10-KA_EX-10.38_9893581_EX-10.38_Co-Branding Agreement__Minimum Commitment",
+          "category": "Minimum Commitment",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 300,
+          "gold_chars": 2296,
+          "overlap_chars": 242,
+          "quotes": [
+            "MUSCLEPHARM CORP, 10-K/A, 2/8/2017\n\n\n\n\n\n\n\n  Section (2)   Guaranteed Minimum Royalty during the First Additional Term:   In the event that the Renewal Threshold is achieved in the Third Contract Year, during the First Additional Term the Minimum Royalty and Timing of Payment shall be as follows:   C"
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1425,
+          "output_tokens": 75,
+          "latency_s": 0.0004558563232421875,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT__Expiration Date",
+          "category": "Expiration Date",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 122,
+          "gold_chars": 651,
+          "overlap_chars": 0,
+          "quotes": [
+            "product information or reviews           about technology products that is not a manufacturer of those           products."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1435,
+          "output_tokens": 30,
+          "latency_s": 0.0004932880401611328,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement__Non-Transferable License",
+          "category": "Non-Transferable License",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 89,
+          "gold_chars": 168,
+          "overlap_chars": 0,
+          "quotes": [
+            "herein and as may be given to Company, from time to time , in writing by the Association."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1468,
+          "output_tokens": 22,
+          "latency_s": 0.0003218650817871094,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "EbixInc_20010515_10-Q_EX-10.3_4049767_EX-10.3_Co-Branding Agreement__Parties",
+          "category": "Parties",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 182,
+          "gold_chars": 29,
+          "overlap_chars": 15,
+          "quotes": [
+            "EXHIBIT 10.3\n\n   [ABOUT LOGO]\n\nCO-BRANDING AGREEMENT\n\nThis Agreement (the \"Agreement\"), dated this 19th day of January, 2001 (the \"Effective Date\"), is by and between About.com, Inc."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1369,
+          "output_tokens": 45,
+          "latency_s": 0.0003745555877685547,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP AGREEMENT__Cap On Liability",
+          "category": "Cap On Liability",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 262,
+          "gold_chars": 655,
+          "overlap_chars": 0,
+          "quotes": [
+            "OF THIS                   AGREEMENT AND HEREBY DISCLAIMS ANY AND ALL IMPLIED WARRANTIES,                   INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND                   FITNESS FOR A PARTICULAR PURPOSE REGARDING SUCH SUBJECT                   MATTER."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1422,
+          "output_tokens": 65,
+          "latency_s": 0.00038433074951171875,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement__Governing Law",
+          "category": "Governing Law",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 299,
+          "gold_chars": 349,
+          "overlap_chars": 0,
+          "quotes": [
+            "remedies,                   rights, undertakings, obligations, and agreements contained in                   this Agreement will be cumulative and none of them will be in                   limitation of any other remedy, right, undertaking, obligation                   or agreement of either party."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1468,
+          "output_tokens": 74,
+          "latency_s": 0.0003502368927001953,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT__Affiliate License-Licensee",
+          "category": "Affiliate License-Licensee",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 299,
+          "gold_chars": 543,
+          "overlap_chars": 299,
+          "quotes": [
+            "grant a sublicense to the Company to use such Software pursuant to the Lease and will allow Lessor to grant a sublicense to a third party after a termination or the expiration of the Lease in the event the Company does not elect to exercise any purchase option that may be provided for in the Lease;"
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1511,
+          "output_tokens": 74,
+          "latency_s": 0.00045609474182128906,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement__Parties",
+          "category": "Parties",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 241,
+          "gold_chars": 65,
+          "overlap_chars": 65,
+          "quotes": [
+            "Exhibit 10.1\n\nStrategic Alliance Agreement\n\nAGREEMENT made as of  , 2013, between Freedom Mortgage Corporation, a New Jersey corporation (\"Freedom Mortgage\"), and Cherry Hill Mortgage Investment Corp., a Maryland corporation (\"Cherry Hill\")."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1384,
+          "output_tokens": 60,
+          "latency_s": 0.0006158351898193359,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "HfEnterprisesInc_20191223_S-1_EX-10.22_11931299_EX-10.22_Development Agreement__Covenant Not To Sue",
+          "category": "Covenant Not To Sue",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 205,
+          "gold_chars": 698,
+          "overlap_chars": 0,
+          "quotes": [
+            "immediately cease use of all proprietary technology files heretofore delivered by DSS and shall deliver to DSS all such proprietary files along with any and all Improvements completed to date by Developer."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1395,
+          "output_tokens": 51,
+          "latency_s": 0.00047087669372558594,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement__Non-Compete",
+          "category": "Non-Compete",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 158,
+          "gold_chars": 359,
+          "overlap_chars": 0,
+          "quotes": [
+            "agrees to give the Customer exclusive rights to the marketing, promotion and sales of the new products should the Customer decide to take on the new products."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1457,
+          "output_tokens": 39,
+          "latency_s": 0.000453948974609375,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "HERTZGLOBALHOLDINGS,INC_07_07_2016-EX-10.4-INTELLECTUAL PROPERTY AGREEMENT__Anti-Assignment",
+          "category": "Anti-Assignment",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 155,
+          "gold_chars": 298,
+          "overlap_chars": 0,
+          "quotes": [
+            "8501 Williams Road Estero, Florida 33928 Attn: General Counsel Fax: (866) 888-3765 E-mail: rfrecker@hertz.com   If HERC, to:   27500 Riverview Center Blvd."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1368,
+          "output_tokens": 38,
+          "latency_s": 0.0005776882171630859,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP AGREEMENT__Parties",
+          "category": "Parties",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 254,
+          "gold_chars": 27,
+          "overlap_chars": 0,
+          "quotes": [
+            "1                                                                    Exhibit 10.16\n\n                                                                 CONFIDENTIAL Portions of this Exhibit have been omitted pursuant to a request for confidential treatment."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1358,
+          "output_tokens": 63,
+          "latency_s": 0.0003936290740966797,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "BizzingoInc_20120322_8-K_EX-10.17_7504499_EX-10.17_Endorsement Agreement__Agreement Date",
+          "category": "Agreement Date",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 300,
+          "gold_chars": 14,
+          "overlap_chars": 14,
+          "quotes": [
+            "CELEBRITY ENDORSEMENT AGREEMENT     THIS AGREEMENT is made as of this March 14, 2012 but effective as of March 1, 2012 (\"Effective Date\") by and between Bizzingo, Inc., a Nevada  corporation with offices at 63 Main Street, Suite 202, Flemington, NJ 08822 (\"Bizzingo\") and Joseph Theismann, an individ"
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1368,
+          "output_tokens": 75,
+          "latency_s": 0.00036835670471191406,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "HALITRON,INC_03_01_2005-EX-10.15-SPONSORSHIP AND DEVELOPMENT AGREEMENT__License Grant",
+          "category": "License Grant",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 68,
+          "gold_chars": 2489,
+          "overlap_chars": 68,
+          "quotes": [
+            "rights being limited to the       world (the \"Contract Territory\")\";"
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1355,
+          "output_tokens": 17,
+          "latency_s": 0.00070953369140625,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement__Governing Law",
+          "category": "Governing Law",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 300,
+          "gold_chars": 209,
+          "overlap_chars": 0,
+          "quotes": [
+            "required to be given pursuant to the terms set forth in this Agreement shall be deemed given on the day notice is either delivered personally, or by fax or overnight or certified delivery or deposited in the mail addressed as specified below: If to the American Diabetes Association: Address: 2451 Cr"
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1315,
+          "output_tokens": 75,
+          "latency_s": 0.0007042884826660156,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT VENTURE CONTRACT__Audit Rights",
+          "category": "Audit Rights",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 22,
+          "gold_chars": 1385,
+          "overlap_chars": 0,
+          "quotes": [
+            "Joint Venture Company."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1338,
+          "output_tokens": 5,
+          "latency_s": 0.0003707408905029297,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP AGREEMENT__Revenue/Profit Sharing",
+          "category": "Revenue/Profit Sharing",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 272,
+          "gold_chars": 1907,
+          "overlap_chars": 272,
+          "quotes": [
+            "Sponsor will pay Excite [****] of the gross margin                            Sponsor realizes on the gross revenue amount equal to                            the excess of the Total Revenue over the Revenue                             Floor during the three-month period."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1251,
+          "output_tokens": 68,
+          "latency_s": 0.0003561973571777344,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement__Governing Law",
+          "category": "Governing Law",
+          "gold_present": true,
+          "pred_present": true,
+          "pred_chars": 168,
+          "gold_chars": 636,
+          "overlap_chars": 0,
+          "quotes": [
+            "STATE OF ILLINOIS\n\nIn recognition of the requirements of the Illinois law, the Goosehead Insurance Agency, LLC Franchise Agreement shall be supplemented as follows:\n\n1."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1405,
+          "output_tokens": 42,
+          "latency_s": 0.0004391670227050781,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "TRIZETTOGROUPINC_08_18_1999-EX-10.17-TECHNICAL INFRASTRUCTURE MAINTENANCE AGREEMENT__Irrevocable Or Perpetual License",
+          "category": "Irrevocable Or Perpetual License",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 56,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "the Customer                   has accepted such change."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1442,
+          "output_tokens": 14,
+          "latency_s": 0.0003688335418701172,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "MSCIINC_02_28_2008-EX-10.10-__Unlimited/All-You-Can-Eat-License",
+          "category": "Unlimited/All-You-Can-Eat-License",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 99,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "Stanley shall cease to own more than 50% of the issued and outstanding shares of MSCI common stock."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1458,
+          "output_tokens": 24,
+          "latency_s": 0.00047278404235839844,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY AGREEMENT__Notice Period To Terminate Renewal",
+          "category": "Notice Period To Terminate Renewal",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 110,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "the PcoMed Surface Modification Technology in any way that will adversely affect its integrity or performance."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1381,
+          "output_tokens": 27,
+          "latency_s": 0.00047206878662109375,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION AGREEMENT__Affiliate License-Licensor",
+          "category": "Affiliate License-Licensor",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 298,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "determine the following to be verified by a study to be performed by a hydrogeologist mutually agreed upon by both Parties (\"Post-Well Study\"): (a) the gallons per day (\"GPD\") of maximum water capacity of the Existing CRA Well or alternate well, as may be required under Section 5 of the AGREEMENT;"
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1391,
+          "output_tokens": 74,
+          "latency_s": 0.0005581378936767578,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "PLAYAHOTELS_RESORTSNV_03_14_2017-EX-10.22-STRATEGIC ALLIANCE AGREEMENT (Hyatt Ziva Cancun)__Anti-Assignment",
+          "category": "Anti-Assignment",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 96,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "Hyatt All-Inclusive Resorts or any other agreements between the parties and/or their affiliates;"
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1482,
+          "output_tokens": 24,
+          "latency_s": 0.0004410743713378906,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "EcoScienceSolutionsInc_20180406_8-K_EX-10.1_11135398_EX-10.1_Sponsorship Agreement__No-Solicit Of Employees",
+          "category": "No-Solicit Of Employees",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 75,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "in good faith at all times in the performance of its obligations hereunder."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1504,
+          "output_tokens": 18,
+          "latency_s": 0.0005090236663818359,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "EbixInc_20010515_10-Q_EX-10.3_4049767_EX-10.3_Co-Branding Agreement__Source Code Escrow",
+          "category": "Source Code Escrow",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 66,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "is entitled, ebix agrees to pay About.com the additional sums due."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1454,
+          "output_tokens": 16,
+          "latency_s": 0.00037169456481933594,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement__Insurance",
+          "category": "Insurance",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 294,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "one party notifies the other of its desire to terminate this Agreement at least sixty 90 days prior to the expiration of the Initial Term or then current renewal term, as applicable, or unless a new Agreement is signed between the USA MCO and IMedicor which will then invalidate this Agreement."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1480,
+          "output_tokens": 73,
+          "latency_s": 0.000484466552734375,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement__Renewal Term",
+          "category": "Renewal Term",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 91,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "all Governmental Entities that are required in order for it to consummate the Transactions;"
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1495,
+          "output_tokens": 22,
+          "latency_s": 0.0004506111145019531,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic Alliance Agreement__Most Favored Nation",
+          "category": "Most Favored Nation",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 54,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "marketing expense incurred by USA MCO in this project."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1499,
+          "output_tokens": 13,
+          "latency_s": 0.00040030479431152344,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT__Termination For Convenience",
+          "category": "Termination For Convenience",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 13,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "notification."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1475,
+          "output_tokens": 3,
+          "latency_s": 0.00048232078552246094,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "GALERATHERAPEUTICS,INC_02_14_2020-EX-99.A-JOINT FILING AGREEMENT__Minimum Commitment",
+          "category": "Minimum Commitment",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 55,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "execute this Agreement this 14t h day of February 2020."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1348,
+          "output_tokens": 13,
+          "latency_s": 0.00032448768615722656,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT__Volume Restriction",
+          "category": "Volume Restriction",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 294,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "buttons, portals and                  other fixed Promotions that include embedded links to the                  Company Site (the \"Retail Promotions\" and, together with the                  advertising banners contemplated in the preceding paragraph,                  the \"Online Promotions\")."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1321,
+          "output_tokens": 73,
+          "latency_s": 0.0003323554992675781,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "PLAYAHOTELS_RESORTSNV_03_14_2017-EX-10.22-STRATEGIC ALLIANCE AGREEMENT (Hyatt Ziva Cancun)__Most Favored Nation",
+          "category": "Most Favored Nation",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 293,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "a management company to operate that Hyatt All-Inclusive Resort, then Hyatt agrees to provide notice to Playa and introduce Playa to that third party for purposes of enabling Playa (at its option) to negotiate for the opportunity to manage that Hyatt All-Inclusive Resort for that third party."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1255,
+          "output_tokens": 73,
+          "latency_s": 0.00042891502380371094,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "TUNIUCORP_03_06_2014-EX-10-COOPERATION AGREEMENT__Insurance",
+          "category": "Insurance",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 72,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "arising out of violation of anyrepresentations and warranties hereunder."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1358,
+          "output_tokens": 18,
+          "latency_s": 0.00038242340087890625,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement__Warranty Duration",
+          "category": "Warranty Duration",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 140,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "forth in Exhibit \"B\" as RESAC Submittal Dates, the first of which shall be approximately ninety (90) days after execution of this Agreement."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1424,
+          "output_tokens": 35,
+          "latency_s": 0.0003962516784667969,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Maintenance Agreement3__Rofr/Rofo/Rofn",
+          "category": "Rofr/Rofo/Rofn",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 105,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "SCHEDULE TO Software License, Customization and Maintenance Agreement    Supplier Name:  Cardlytics, Inc."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 579,
+          "output_tokens": 26,
+          "latency_s": 0.00035858154296875,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT VENTURE CONTRACT__Third Party Beneficiary",
+          "category": "Third Party Beneficiary",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 240,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "technology), related documentation and operational know-how, and provide technologically advanced management support and technical assistance for the production of the Joint Venture Products, which contract is attached hereto as Appendix 2."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1530,
+          "output_tokens": 60,
+          "latency_s": 0.0004343986511230469,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "BIOPURECORP_06_30_1999-EX-10.13-AGENCY AGREEMENT__Third Party Beneficiary",
+          "category": "Third Party Beneficiary",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 283,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "the Agent (and its officers, directors, employees, agents and affiliates)       and hold it (and them) harmless from and against any Loss arising out of       or in connection with the inaccuracy or breach of any representation,       warranty or obligation of the Company hereunder."
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1376,
+          "output_tokens": 70,
+          "latency_s": 0.000324249267578125,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        },
+        {
+          "qid": "AIRSPANNETWORKSINC_04_11_2000-EX-10.5-Distributor Agreement__Liquidated Damages",
+          "category": "Liquidated Damages",
+          "gold_present": false,
+          "pred_present": true,
+          "pred_chars": 299,
+          "gold_chars": 0,
+          "overlap_chars": 0,
+          "quotes": [
+            "breach of warranty, on grounds of failure of essential purpose, or otherwise, shall in no circumstance exceed the total amount payable by Distributor to Airspan under this Agreement for the provision of\n\n- -------------------------------------------------------------------------------\n\nPage 19\n\nthe "
+          ],
+          "proposed": 1,
+          "rejected": 0,
+          "parse_failures": 0,
+          "corrected": false,
+          "attempts": 1,
+          "input_tokens": 1438,
+          "output_tokens": 75,
+          "latency_s": 0.00061798095703125,
+          "log": [
+            "attempt 1: k=5 found=True verified=1 rejected=0"
+          ]
+        }
+      ]
+    }
+  }
+}
